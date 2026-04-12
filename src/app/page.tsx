@@ -9,6 +9,7 @@ import { Zap, Mail, Globe } from "lucide-react";
 import { PortfolioSection } from "@/components/ui/portfolio-section";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
+import NeuralBackground from "@/components/ui/flow-field-background";
 
 // Stats strip data
 const stats = [
@@ -160,6 +161,12 @@ export default function Home() {
 
               <InteractiveServices />
             </div>
+          </section>
+
+          {/* ─── SINAPSI ─── */}
+          <section className="relative h-[400px] overflow-hidden">
+            <NeuralBackground className="w-full h-full" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 pointer-events-none" />
           </section>
 
           {/* ─── PORTFOLIO ─── */}
