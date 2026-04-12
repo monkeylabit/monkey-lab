@@ -164,8 +164,10 @@ export default function Home() {
           </section>
 
           {/* ─── SINAPSI ─── */}
-          <section className="relative h-[600px] overflow-hidden">
-            <NeuralSynapse className="w-full h-full" />
+          <section className="py-16 flex justify-center items-center">
+            <div className="w-full max-w-3xl mx-4 aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-cyan-500/10">
+              <NeuralSynapse />
+            </div>
           </section>
 
           {/* ─── PORTFOLIO ─── */}
