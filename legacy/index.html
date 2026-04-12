@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digex - Agenzia specializzata in siti web professionali, e-commerce e automazioni. Trasformiamo la tua identità digitale.">
+  <meta name="keywords" content="web design, e-commerce, automazioni, siti web professionali, digital agency">
+  <title>Digex - Identità Digitale | Siti Web, E-commerce & Automazioni</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home">
+        <img src="assets/images/logo.jpg" alt="Digex Logo" class="nav-logo">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#servizi" class="nav-link">Servizi</a></li>
+        <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+        <li><a href="#contatti" class="nav-link">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <img src="assets/images/logo.jpg" alt="Digex - Identità Digitale" class="hero-logo">
+      <h1 class="hero-title">Trasformiamo la tua visione digitale in realtà</h1>
+      <p class="hero-subtitle">
+        Creiamo soluzioni web professionali, e-commerce performanti e automazioni intelligenti per portare il tuo business al livello successivo.
+      </p>
+      <a href="#servizi" class="cta-button">Scopri i nostri servizi</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="servizi">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">I Nostri Servizi</h2>
+        <p class="section-subtitle">
+          Soluzioni digitali complete per trasformare e far crescere il tuo business online
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1: Professional Websites -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🌐</div>
+          <h3>Siti Web Professionali</h3>
+          <p>
+            Progettiamo e sviluppiamo siti web moderni, responsive e ottimizzati per la SEO. 
+            Ogni progetto è personalizzato per rispecchiare perfettamente la tua identità aziendale 
+            e convertire i visitatori in clienti.
+          </p>
+        </div>
+
+        <!-- Service 2: E-commerce -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🛒</div>
+          <h3>E-commerce</h3>
+          <p>
+            Creiamo piattaforme e-commerce complete e performanti che semplificano la gestione 
+            e massimizzano le vendite. Integriamo pagamenti sicuri, gestione inventario e 
+            strumenti di marketing avanzati.
+          </p>
+        </div>
+
+        <!-- Service 3: Automations -->
+        <div class="service-card fade-in">
+          <div class="service-icon">⚡</div>
+          <h3>Automazioni</h3>
+          <p>
+            Automatizziamo i processi aziendali per farti risparmiare tempo e ridurre gli errori. 
+            Dalle email marketing ai workflow personalizzati, rendiamo il tuo business più efficiente 
+            e scalabile.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="chi-siamo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Chi Siamo</h2>
+      </div>
+      
+      <div class="about-content fade-in">
+        <p class="about-text">
+          <span class="about-highlight">Digex</span> è un'agenzia digitale specializzata nella 
+          creazione di <span class="about-highlight">identità digitali</span> complete e performanti. 
+          Uniamo design moderno, tecnologie all'avanguardia e strategie di marketing per 
+          trasformare ogni progetto in un successo.
+        </p>
+        <p class="about-text">
+          Il nostro team di esperti lavora a stretto contatto con te per comprendere le tue 
+          esigenze e creare soluzioni su misura che superano le aspettative. Dalla piccola impresa 
+          all'azienda strutturata, aiutiamo i nostri clienti a crescere nel mondo digitale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contatti">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Contattaci</h2>
+        <p class="section-subtitle">
+          Raccontaci il tuo progetto e scopri come possiamo aiutarti
+        </p>
+      </div>
+      
+      <div class="contact-container fade-in">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              required
+              placeholder="Il tuo nome"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              required
+              placeholder="la.tua@email.com"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="service" class="form-label">Servizio di interesse</label>
+            <input 
+              type="text" 
+              id="service" 
+              name="service" 
+              class="form-input"
+              placeholder="es. Sito web, E-commerce, Automazioni"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Messaggio *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-textarea" 
+              required
+              placeholder="Raccontaci il tuo progetto..."
+            ></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit">Invia Messaggio</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; 2026 Digex - Identità Digitale. Tutti i diritti riservati.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
