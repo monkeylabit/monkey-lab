@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, useSpring, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import React, { useRef, useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Laptop, ShoppingCart, Bot, ArrowRight, Check, X } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -91,22 +91,38 @@ const services = [
 export function InteractiveServices() {
     const [activeCard, setActiveCard] = useState(0);
     const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
-    const ref = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end end"],
-    });
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    // Determine active card based on scroll progress
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        const cardsLength = services.length;
-        // Simple logic: divide scroll progress by number of cards
-        const index = Math.min(Math.floor(latest * cardsLength), cardsLength - 1);
-        setActiveCard(index);
-    });
+    const setCardRef = useCallback((el: HTMLDivElement | null, index: number) => {
+        cardRefs.current[index] = el;
+    }, []);
+
+    useEffect(() => {
+        const observers: IntersectionObserver[] = [];
+
+        cardRefs.current.forEach((card, index) => {
+            if (!card) return;
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setActiveCard(index);
+                        }
+                    });
+                },
+                { threshold: 0.4 }
+            );
+
+            observer.observe(card);
+            observers.push(observer);
+        });
+
+        return () => observers.forEach((o) => o.disconnect());
+    }, []);
 
     return (
-        <div ref={ref} className="relative w-full max-w-7xl mx-auto flex justify-center py-0 lg:py-20">
+        <div className="relative w-full max-w-7xl mx-auto flex justify-center py-0 lg:py-20">
             {/* 
               Desktop Layout: Two Columns (Scrollable Content + Sticky Visual)
               Mobile Layout: Single Column (Stacked content blocks with inline visuals)
@@ -151,7 +167,7 @@ export function InteractiveServices() {
                 {/* Content Area - Scrollable */}
                 <div className="w-full lg:w-1/2 relative space-y-24 lg:space-y-0">
                     {services.map((service, index) => (
-                        <div key={service.id} className="min-h-auto lg:min-h-[600px] flex flex-col justify-center py-10 lg:py-0">
+                        <div key={service.id} ref={(el) => setCardRef(el, index)} className="min-h-auto lg:min-h-[600px] flex flex-col justify-center py-10 lg:py-0">
 
                             {/* Mobile Info Header */}
                             <div className="flex items-center gap-4 mb-6">
