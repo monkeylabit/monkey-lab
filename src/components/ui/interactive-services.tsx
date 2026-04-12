@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const services = [
     {
         id: "web",
-        icon: <Image src="/monkey-laptop.png" alt="Monkey Lab Computer" width={80} height={80} className="w-16 h-16 lg:w-20 lg:h-20 object-contain drop-shadow-md" />,
+        icon: <Image src="/pc.png" alt="Siti Web Professionali" width={80} height={80} className="w-16 h-16 lg:w-20 lg:h-20 object-contain drop-shadow-md" />,
         title: "Siti Web Professionali",
         shortDesc: "Creiamo il tuo sito web gratis in 24h.",
         fullDesc: (
