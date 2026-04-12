@@ -69,9 +69,10 @@ const services = [
         fullDesc: "Creiamo assistenti virtuali che rispondono alle richieste, prendono e organizzano appuntamenti, inviano conferme e promemoria automatici, lavorando per te 24/7",
         readMoreContent: (
             <div className="space-y-4 text-left">
-                <p>Ogni chiamata persa è un possibile cliente perso. Offriamo un assistente virtuale ottimizzato per uffici e attività locali che ricevono molte richieste ogni giorno.</p>
-                <p>L'assistente risponde automaticamente 24/7, prende appuntamenti e riduce il tempo perso al telefono, permettendoti di concentrarti solo sul tuo lavoro.</p>
-                <p>Il servizio ha un costo di 120€ al mese ed è disponibile con una settimana di prova gratuita, così puoi testarlo senza impegno.</p>
+                <p>Ogni richiesta non gestita è un&apos;opportunità che sfuma.</p>
+                <p>Creiamo assistenti virtuali, chatbot e automazioni su misura per uffici e attività locali che gestiscono un alto volume di contatti ogni giorno.</p>
+                <p>Le nostre soluzioni rispondono automaticamente 24/7, gestiscono le richieste dei clienti, organizzano appuntamenti e ottimizzano i flussi di lavoro, riducendo il tempo perso e migliorando l&apos;efficienza.</p>
+                <p>In questo modo puoi concentrarti davvero su ciò che conta: far crescere il tuo business, mentre tutto il resto lavora in automatico.</p>
             </div>
         ),
         features: [
