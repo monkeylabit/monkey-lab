@@ -85,10 +85,8 @@ export default function Home() {
                     La nostra filosofia
                   </div>
 
-                  <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500">
-                      Chi Siamo
-                    </span>
+                  <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
+                    Chi Siamo
                   </h2>
 
                   <div className="text-base md:text-lg text-gray-400 leading-relaxed space-y-4">
