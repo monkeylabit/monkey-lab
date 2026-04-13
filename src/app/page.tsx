@@ -190,11 +190,15 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
                       Lavoriamo Insieme
                     </span>
                   </h2>
+
+                  <p className="text-white italic text-center mb-10">
+                    Scrivici anche per un caffè virtuale ☕️
+                  </p>
 
                   {/* Contact options */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
