@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import NeuralSynapse from "@/components/ui/neural-synapse";
 
 const services = [
     {
@@ -111,21 +112,25 @@ export function InteractiveServices() {
                             "bg-white/[0.02]"
                         )}
                     >
-                        {/* Video — alterna sinistra/destra su desktop */}
+                        {/* Video / Animazione — alterna sinistra/destra su desktop */}
                         <div className={cn(
                             "w-full lg:w-1/2 flex-shrink-0",
                             !isEven && "lg:order-last"
                         )}>
                             <div className="w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                                <video
-                                    className="w-full h-full object-cover"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                >
-                                    <source src={service.video} type="video/mp4" />
-                                </video>
+                                {service.id === "automation" ? (
+                                    <NeuralSynapse />
+                                ) : (
+                                    <video
+                                        className="w-full h-full object-cover"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                    >
+                                        <source src={service.video} type="video/mp4" />
+                                    </video>
+                                )}
                             </div>
                         </div>
 
