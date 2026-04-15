@@ -117,9 +117,16 @@ export function InteractiveServices() {
                             "w-full lg:w-1/2 flex-shrink-0",
                             !isEven && "lg:order-last"
                         )}>
-                            <div className="w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
                                 {service.id === "automation" ? (
-                                    <NeuralSynapse />
+                                    <>
+                                        <NeuralSynapse />
+                                        <div className="absolute top-4 left-0 right-0 flex justify-center pointer-events-none z-10">
+                                            <span className="text-2xl font-bold text-white tracking-tight italic drop-shadow-[0_0_8px_rgba(0,210,255,0.6)]">
+                                                Touch me
+                                            </span>
+                                        </div>
+                                    </>
                                 ) : (
                                     <video
                                         className="w-full h-full object-cover"
